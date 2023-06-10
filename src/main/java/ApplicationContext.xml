@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        
+     <bean id="address" class="com.gawdeparag.springCoreAssignments.Address">
+     	<!-- <property name="street" value="4, Joe street"></property>
+     	<property name="city" value="Atlanta"></property>
+     	<property name="state" value="Georgia"></property>
+     	<property name="zip" value="093802"></property>
+     	<property name="country" value="US"></property> -->
+     	
+     	<constructor-arg index="0" value="4, Joe street"></constructor-arg>
+     	<constructor-arg index="1" value="Atlanta"></constructor-arg>
+     	<constructor-arg index="2" value="Georgia"></constructor-arg>
+     	<constructor-arg index="3" value="036523"></constructor-arg>
+     	<constructor-arg index="4" value="US"></constructor-arg>
+     	
+     </bean>
+        
+     <bean id="customer" class="com.gawdeparag.springCoreAssignments.Customer">
+     	<!-- <property name="customerId" value="4512"></property>
+     	<property name="customerName" value="John Smith"></property>
+     	<property name="customerContact" value="51324951"></property>
+     	<property name="customerAddress" ref="address"></property> -->
+     	
+     	<constructor-arg index="0" value="4512"></constructor-arg>
+     	<constructor-arg index="1" value="John Smith"></constructor-arg>
+     	<constructor-arg index="2" value="415324331"></constructor-arg>
+     	<constructor-arg index="3" ref="address"></constructor-arg>
+     </bean>
+        
+</beans>
